@@ -47,9 +47,12 @@
   &__wrapper {
     position: relative;
     display: flex;
+    gap: 61px;
+    z-index: 0;
 
     @media (width <= 700px) {
       width: 100%;
+      gap: 0;
       justify-content: space-between;
       padding: 18px 0 0;
       border-top: 1px solid variables.$grey;
@@ -58,7 +61,18 @@
     @media (width <= 480px) {
       padding: 17.5px 0;
       border-top: none;
-      background-color: variables.$bg-main;
+
+      &::before {
+        content: '';
+        display: block;
+        top: 0;
+        left: -15px;
+        right: -15px;
+        position: absolute;
+        background-color: variables.$bg-main;
+        height: 100%;
+        z-index: -1;
+      }
     }
   }
 
@@ -71,7 +85,9 @@
       width: calc(100% + 30px);
       height: 100vh;
       background-color: variables.$bg-main;
-      transform: translateX(-100%);
+      transform: translateX(-150%);
+      transition: transform 0.5s ease;
+      padding: 76px 15px 0;
     }
   }
 
@@ -98,6 +114,11 @@
       list-style: none;
       display: flex;
       gap: 58px;
+
+      @media (width <= 480px) {
+        flex-direction: column;
+        gap: 50px;
+      }
     }
   }
 
