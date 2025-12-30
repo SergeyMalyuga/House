@@ -1,0 +1,129 @@
+@use '../../../styles/variables' as variables;
+
+.header-main {
+  background-color: variables.$bg-main;
+  padding: 32.5px 0;
+  color: variables.$text-main-color;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0;
+  text-align: left;
+
+  @media (width <= 1024px) {
+    font-size: clamp(1.125rem, 0.75rem + 0.7813vw, 1.25rem);
+    line-height: clamp(1.3125rem, 0.9375rem + 0.7813vw, 1.4375rem);
+  }
+
+  @media (width <= 700px) {
+    padding: 16px 0 18px;
+  }
+
+  @media (width <= 480px) {
+    background-color: white;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (width <= 768px) {
+      padding: 0 39px
+    }
+
+    @media (width <= 700px) {
+      flex-direction: column;
+    }
+
+    @media (width <= 576px) {
+      padding: 0 33px
+    }
+
+    @media (width <= 480px) {
+      padding: 0 15px
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+
+    @media (width <= 700px) {
+      width: 100%;
+      justify-content: space-between;
+      padding: 18px 0 0;
+      border-top: 1px solid variables.$grey;
+    }
+
+    @media (width <= 480px) {
+      padding: 17.5px 0;
+      border-top: none;
+      background-color: variables.$bg-main;
+    }
+  }
+
+  &__nav {
+    @media (width <= 480px) {
+      position: absolute;
+      display: block;
+      top: 0;
+      left: -15px;
+      width: calc(100% + 30px);
+      height: 100vh;
+      background-color: variables.$bg-main;
+      transform: translateX(-100%);
+    }
+  }
+
+  &__link {
+    &-logo {
+      display: inline-block;
+      max-width: 143px;
+      width: 100%;
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      @media (width <= 700px) {
+        margin-bottom: 15.5px;
+      }
+    }
+  }
+
+  &__list {
+    &-nav {
+      list-style: none;
+      display: flex;
+      gap: 58px;
+    }
+  }
+
+  &__button {
+    &-basket {
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      transition: color 0.3s ease, background-color 0.3s ease;
+
+      &:hover {
+        color: variables.$hover;
+      }
+
+      &:active {
+        color: variables.$active;
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      &:focus-visible {
+        background-color: variables.$focus;
+      }
+    }
+  }
+}

@@ -1,9 +1,14 @@
 // ===== COLOR =====
+$text-main-color: rgb(44 45 53 / 100%);
+$grey: rgb(195 209 198 / 100%);
 
 /* Фон */
+$bg-main: rgb(225 237 230 / 100%);
 
 /* Компоненты */
+$hover: rgb(89 141 102 / 100%);
+$active: rgb(55 107 68 / 100%);
+$focus: rgb(212 232 217 / 100%);
 
 // ===== TYPOGRAPHY =====
-$font-family-primary: "Muller", sans-serif;
-$font-family-secondary: "Russo One", sans-serif;
+$font-family-primary: "Raleway", sans-serif;
