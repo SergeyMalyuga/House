@@ -147,4 +147,24 @@
       }
     }
   }
+
+  &__button-burger {
+    display: none;
+    width: 20px;
+    height: 16px;
+    cursor: pointer;
+
+    @media (width <= 480px) {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+
+  &__line {
+    display: inline-block;
+    background-color: variables.$storm-grey;
+    width: 100%;
+    height: 2px;
+  }
 }
