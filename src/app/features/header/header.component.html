@@ -5,7 +5,8 @@
            alt="Логотип мастерской реплик картин 'Ink.House'">
     </a>
     <div class="header-main__wrapper">
-      <nav class="header-main__nav" aria-label="Основная навигация">
+      <nav id="main-navigation" class="header-main__nav" aria-label="Основная навигация"
+           [attr.aria-hidden]="!isMenuOpen() ? 'true' : null">
         <ul class="header-main__list-nav">
           <li class="header-main__item-nav">
             <a class="link header-main__link-nav" href="#">Репродукции</a>
@@ -18,11 +19,17 @@
           </li>
         </ul>
       </nav>
-      <div class="header-main__button-burger" role="button" aria-label="Открытие меню основной навигации">
-        <span class="header-main__line header-main__line--top"></span>
-        <span class="header-main__line header-main__line--middle"></span>
-        <span class="header-main__line header-main__line--button"></span>
-      </div>
+      <button class="header-main__button-burger" type="button" aria-label="Открытие меню основной навигации"
+              appToggleNavMenu (navMenuToggled)="onNavMenuToggled()"
+              [attr.aria-expanded]="isMenuOpen() ? 'true' : 'false'" aria-controls="main-navigation">
+        <span class="header-main__line header-main__line--top"
+              [style.transform]="isMenuOpen() ? 'rotate(45deg)' : 'rotate(0)'"
+              [class.header-main__nav-open]="isMenuOpen()"></span>
+        <span class="header-main__line header-main__line--middle" [style.opacity]="isMenuOpen() ? '0' : '1'"></span>
+        <span class="header-main__line header-main__line--bottom"
+              [style.transform]="isMenuOpen() ? 'rotate(-45deg)' : 'rotate(0)'"
+              [class.header-main__nav-open]="isMenuOpen()"></span>
+      </button>
       <button class="header-main__button-basket" type="button">
         <svg width="24" height="24">
           <use href="./assets/images/vector/header-basket.svg#header-basket"/>

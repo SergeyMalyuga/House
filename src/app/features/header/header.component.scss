@@ -47,6 +47,7 @@
   &__wrapper {
     position: relative;
     display: flex;
+    align-items: center;
     gap: 61px;
     z-index: 0;
 
@@ -88,6 +89,15 @@
       transform: translateX(-150%);
       transition: transform 0.5s ease;
       padding: 76px 15px 0;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &-open {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      visibility: visible;
     }
   }
 
@@ -149,10 +159,14 @@
   }
 
   &__button-burger {
+    position: relative;
     display: none;
     width: 20px;
     height: 16px;
     cursor: pointer;
+    border: none;
+    background-color: transparent;
+    padding: 0;
 
     @media (width <= 480px) {
       display: flex;
@@ -166,5 +180,6 @@
     background-color: variables.$storm-grey;
     width: 100%;
     height: 2px;
+    transition: transform 0.3s ease, top 0.3s ease;
   }
 }
