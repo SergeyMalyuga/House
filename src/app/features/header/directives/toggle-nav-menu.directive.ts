@@ -1,4 +1,5 @@
-import {Directive, EventEmitter, HostListener, Output} from '@angular/core';
+import {Directive, EventEmitter, HostListener, inject, Output} from '@angular/core';
+import {BodyService} from '../../../core/services/body.sevice';
 
 @Directive({
   selector: '[appToggleNavMenu]'
