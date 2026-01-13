@@ -11,4 +11,21 @@
   text-align: left;
   padding: 20px 59px;
   border: 1px solid variables.$hover;
+
+  &:hover {
+    background-color: variables.$hover;
+    color: variables.$hovered-text-on-dark;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    background-color: variables.$focus;
+  }
+
+  &:active {
+    background-color: variables.$active;
+  }
 }
