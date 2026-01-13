@@ -1,8 +1,7 @@
-import {Directive, EventEmitter, HostListener, inject, Output} from '@angular/core';
-import {BodyService} from '../../../core/services/body.sevice';
+import { Directive, EventEmitter, HostListener, Output } from '@angular/core';
 
 @Directive({
-  selector: '[appToggleNavMenu]'
+  selector: '[appToggleNavMenu]',
 })
 export class ToggleNavMenuDirective {
   @Output() navMenuToggled = new EventEmitter<void>();
@@ -12,6 +11,3 @@ export class ToggleNavMenuDirective {
     this.navMenuToggled.emit();
   }
 }
-
-
-

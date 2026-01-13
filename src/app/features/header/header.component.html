@@ -1,12 +1,21 @@
 <header class="header-main" role="banner">
   <div class="container">
     <a class="header-main__link-logo" href="#">
-      <img src="./assets/images/vector/logo.svg" width="143" height="35"
-           alt="Логотип мастерской реплик картин 'Ink.House'">
+      <img
+        src="./assets/images/vector/logo.svg"
+        width="143"
+        height="35"
+        alt="Логотип мастерской реплик картин 'Ink.House'"
+      />
     </a>
     <div class="header-main__wrapper">
-      <nav id="main-navigation" class="header-main__nav" [class.header-main__nav--open]="isMenuOpen()" aria-label="Основная навигация"
-           [attr.aria-hidden]="!isMenuOpen() ? 'true' : null">
+      <nav
+        id="main-navigation"
+        class="header-main__nav"
+        [class.header-main__nav--open]="isMenuOpen()"
+        aria-label="Основная навигация"
+        [attr.aria-hidden]="!isMenuOpen() ? 'true' : null"
+      >
         <ul class="header-main__list-nav">
           <li class="header-main__item-nav">
             <a class="link header-main__link-nav" href="#">Репродукции</a>
@@ -19,20 +28,33 @@
           </li>
         </ul>
       </nav>
-      <button class="header-main__button-burger" type="button" aria-label="Открытие меню основной навигации"
-              appToggleNavMenu (navMenuToggled)="onNavMenuToggled()"
-              [attr.aria-expanded]="isMenuOpen() ? 'true' : 'false'" aria-controls="main-navigation">
-        <span class="header-main__line header-main__line--top"
-              [class.header-main__line--open-top]="isMenuOpen()"
-              [class.header-main__line--open]="isMenuOpen()"></span>
-        <span class="header-main__line header-main__line--middle" [style.opacity]="isMenuOpen() ? '0' : '1'"></span>
-        <span class="header-main__line header-main__line--bottom"
-              [class.header-main__line--open-bottom]="isMenuOpen()"
-              [class.header-main__line--open]="isMenuOpen()"></span>
+      <button
+        class="header-main__button-burger"
+        type="button"
+        aria-label="Открытие меню основной навигации"
+        appToggleNavMenu
+        (navMenuToggled)="onNavMenuToggled()"
+        [attr.aria-expanded]="isMenuOpen() ? 'true' : 'false'"
+        aria-controls="main-navigation"
+      >
+        <span
+          class="header-main__line header-main__line--top"
+          [class.header-main__line--open-top]="isMenuOpen()"
+          [class.header-main__line--open]="isMenuOpen()"
+        ></span>
+        <span
+          class="header-main__line header-main__line--middle"
+          [style.opacity]="isMenuOpen() ? '0' : '1'"
+        ></span>
+        <span
+          class="header-main__line header-main__line--bottom"
+          [class.header-main__line--open-bottom]="isMenuOpen()"
+          [class.header-main__line--open]="isMenuOpen()"
+        ></span>
       </button>
       <button class="header-main__button-basket" type="button">
         <svg width="24" height="24">
-          <use href="./assets/images/vector/header-basket.svg#header-basket"/>
+          <use href="./assets/images/vector/header-basket.svg#header-basket" />
         </svg>
       </button>
     </div>

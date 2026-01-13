@@ -1,4 +1,4 @@
-@use '../../../styles/variables' as variables;
+@use "../../../styles/variables" as variables;
 
 .header-main {
   background-color: variables.$bg-main;
@@ -28,7 +28,7 @@
     justify-content: space-between;
 
     @media (width <= 768px) {
-      padding: 0 39px
+      padding: 0 39px;
     }
 
     @media (width <= 700px) {
@@ -36,11 +36,11 @@
     }
 
     @media (width <= 576px) {
-      padding: 0 33px
+      padding: 0 33px;
     }
 
     @media (width <= 480px) {
-      padding: 0 15px
+      padding: 0 15px;
     }
   }
 
@@ -64,7 +64,7 @@
       border-top: none;
 
       &::before {
-        content: '';
+        content: "";
         display: block;
         top: 0;
         left: -15px;
@@ -137,7 +137,9 @@
       border: none;
       padding: 0;
       cursor: pointer;
-      transition: color 0.3s ease, background-color 0.3s ease;
+      transition:
+        color 0.3s ease,
+        background-color 0.3s ease;
 
       &:hover {
         color: variables.$hover;
@@ -179,7 +181,9 @@
     background-color: variables.$storm-grey;
     width: 100%;
     height: 2px;
-    transition: transform 0.3s ease, top 0.3s ease;
+    transition:
+      transform 0.3s ease,
+      top 0.3s ease;
 
     &--open {
       position: absolute;
