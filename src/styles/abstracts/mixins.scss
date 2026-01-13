@@ -1,6 +1,6 @@
 @use '../variables' as variables;
 
-@mixin button-style($fontSize, $lineHeight, $width) {
+@mixin button-style($width: 225px, $fontSize: 20px, $lineHeight: 23px, $paddingTopBottom: 20px, $paddingLeftRight: 59px) {
   display: inline-block;
   width: $width;
   text-decoration: none;
@@ -9,8 +9,9 @@
   line-height: $lineHeight;
   letter-spacing: 0;
   text-align: left;
-  padding: 20px 59px;
+  padding: $paddingTopBottom $paddingLeftRight;
   border: 1px solid variables.$hover;
+  transition: background-color 0.5s ease, color 0.5s ease;
 
   &:hover {
     background-color: variables.$hover;

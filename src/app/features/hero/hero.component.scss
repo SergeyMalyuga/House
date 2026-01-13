@@ -5,6 +5,18 @@
   &__content {
     display: flex;
     gap: 30px;
+    padding-bottom: 69px;
+
+    @media (width <= 576px) {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+
+    @media (width <= 480px) {
+      display: block;
+      padding-top: 42px;
+      padding-bottom: 42px;
+    }
   }
 
   &__wrapper {
@@ -16,10 +28,28 @@
         width: 100%;
         height: auto;
       }
+
+      @media (width <= 480px) {
+        display: none;
+      }
     }
 
     &-info {
       padding: 145px 0;
+
+      @media (width <= 768px) {
+        padding: 35px 0;
+      }
+
+      @media (width <= 576px) {
+        max-width: 285px;
+        width: 100%;
+        padding: 0;
+      }
+
+      @media (width <= 480px) {
+        max-width: 100%;
+      }
     }
   }
 
@@ -30,9 +60,19 @@
       letter-spacing: 0;
       text-align: left;
       margin-bottom: 20px;
+      font-weight: 500;
 
       span {
         color: variables.$hover;
+      }
+
+      @media (width <= 768px) {
+        font-size: 40px;
+        line-height: 100%;
+      }
+
+      @media (width <= 576px) {
+        font-size: 36px;
       }
     }
   }
@@ -44,11 +84,28 @@
     letter-spacing: 0;
     text-align: left;
     margin-bottom: 60px;
+
+    @media (width <= 768px) {
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+
+    @media (width <= 576px) {
+      font-size: 16px;
+    }
   }
 
   &__link {
     &-products {
-      @include mixins.button-style(20px, 23px, 225px)
+      @include mixins.button-style;
+
+      @media (width <= 768px) {
+        @include mixins.button-style($width: 210px, $paddingTopBottom: 17.5px, $paddingLeftRight: 50.1px);
+      }
+
+      @media (width <= 576px) {
+        @include mixins.button-style($width: 178px, $fontSize: 18px, $lineHeight: 21px, $paddingTopBottom: 13.5px, $paddingLeftRight: 40px);
+      }
     }
   }
 }
