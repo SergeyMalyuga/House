@@ -6,13 +6,19 @@
       </h2>
       <ul class="products__list-cities">
         <li class="products__item-cities">
-          <button class="products__button-city products__button-active">Франция</button>
+          <button appSelectCity [city]="City.FR" [currentCity]="currentCity()" (citySelected)="onCitySelected($event)"
+                  class="products__button-city">Франция
+          </button>
         </li>
         <li class="products__item-cities">
-          <button class="products__button-city">Германия</button>
+          <button appSelectCity [city]="City.DE" [currentCity]="currentCity()" (citySelected)="onCitySelected($event)"
+                  class="products__button-city">Германия
+          </button>
         </li>
         <li class="products__item-cities">
-          <button class="products__button-city">Англия</button>
+          <button appSelectCity [city]="City.GB" [currentCity]="currentCity()" (citySelected)="onCitySelected($event)"
+                  class="products__button-city">Англия
+          </button>
         </li>
       </ul>
     </header>
