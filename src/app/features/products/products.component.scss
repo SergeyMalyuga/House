@@ -1,0 +1,90 @@
+@use '../../../styles/variables' as variables;
+
+.products {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+
+    @media (width <= 737px) {
+      gap: 20px;
+    }
+
+    @media (width <= 576px) {
+      padding-bottom: 20px;
+    }
+  }
+
+  &__title {
+    &-main {
+      font-size: 40px;
+      font-weight: 500;
+      line-height: 110%;
+      letter-spacing: 0;
+      text-align: left;
+
+      @media (width <= 768px) {
+        font-size: 30px;
+      }
+
+      @media (width <= 576px) {
+        font-size: 24px;
+      }
+    }
+  }
+
+  &__list {
+    &-cities {
+      list-style: none;
+      display: flex;
+      gap: 32px;
+      overflow-x: auto;
+    }
+  }
+
+  &__button {
+    &-city {
+      width: 126px;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 23px;
+      letter-spacing: 0;
+      text-align: center;
+      background-color: variables.$focus;
+      border-radius: 20px;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: variables.$hover;
+        color: variables.$hovered-text-on-dark
+      }
+
+      &:active {
+        background-color: variables.$active;
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      &:focus-visible {
+        outline: 2px variables.$hover solid;
+      }
+
+      @media (width <= 576px) {
+        width: 118px;
+        font-size: 18px;
+        line-height: 21px;
+      }
+    }
+
+    &-active {
+      background-color: variables.$button-selected-background;
+      color: variables.$hovered-text-on-dark
+    }
+  }
+}
