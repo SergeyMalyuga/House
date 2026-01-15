@@ -5,4 +5,10 @@
     <source [srcset]="product.images.tablet" media="(max-width: 768px)">
     <img [src]="product.images.desktop" [alt]="product.name">
   </picture>
+  <div class="card__wrapper-info">
+    <span class="card__author">{{ product.author }}</span>
+    <h3 class="card__title">{{ product.name }}</h3>
+    <span class="card__description">{{ product.description }}</span>
+    <data class="card__price" [value]="product.price">{{ product.price }} руб</data>
+  </div>
 </article>
