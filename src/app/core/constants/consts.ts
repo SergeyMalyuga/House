@@ -2,10 +2,16 @@ export enum AppRoute {
   MAIN = '',
 }
 
-export enum Country {
+export enum CountryRu {
   FR = 'Франция',
   DE = 'Германия',
   GB = 'Англия'
+}
+
+export enum CountryEn {
+  FR = 'France',
+  DE = 'Germany',
+  GB = 'England'
 }
 
 export const ACTIVE_COUNTRY_CLASS = 'products__button-active';

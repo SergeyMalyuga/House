@@ -1,0 +1,8 @@
+<article class="card">
+  <picture class="card__wrapper-image">
+    <source [srcset]="product.images.mobile" media="(max-width: 480px)">
+    <source [srcset]="product.images.tabletMini" media="(max-width: 576px)">
+    <source [srcset]="product.images.tablet" media="(max-width: 768px)">
+    <img [src]="product.images.desktop" [alt]="product.name">
+  </picture>
+</article>

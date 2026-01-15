@@ -1,9 +1,9 @@
-import {ImagesByCountry} from '../../../core/models/images-by-country.model';
-import {Country} from '../../../core/constants/consts';
+import {ProductsByCountry} from '../../../core/models/products-by-country.model';
+import {CountryEn, CountryRu} from '../../../core/constants/consts';
 import {nanoid} from 'nanoid';
 
-export const images: ImagesByCountry = {
-  [Country.FR]: [
+export const mockProducts: ProductsByCountry = {
+  [CountryEn.FR]: [
     {
       id: nanoid(),
       author: 'Марсель Руссо',
@@ -83,5 +83,5 @@ export const images: ImagesByCountry = {
       }
     }
   ],
-  [Country.DE]: [],
+  [CountryEn.DE]: [],
 }

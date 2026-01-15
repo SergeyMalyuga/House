@@ -1,6 +1,6 @@
 import {ImageResolutions} from './image-resolutions.model';
 
-export interface Image {
+export interface Product {
   id: string;
   author: string;
   name: string;
