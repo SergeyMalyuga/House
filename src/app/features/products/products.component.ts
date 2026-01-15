@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, signal} from '@angular/core';
-import {City} from '../../core/constants/consts';
+import {Country} from '../../core/constants/consts';
 import {SelectCityDirective} from './directives/select-city.directive';
 
 @Component({
@@ -12,10 +12,10 @@ import {SelectCityDirective} from './directives/select-city.directive';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProductsComponent {
-  public currentCity = signal<City>(City.FR);
-  public readonly City = City;
+  public currentCity = signal<Country>(Country.FR);
+  public readonly City = Country;
 
-  public onCitySelected(selectedCity: City): void {
+  public onCitySelected(selectedCity: Country): void {
     this.currentCity.set(selectedCity);
   }
 }
