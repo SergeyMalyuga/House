@@ -9,6 +9,7 @@
     <span class="card__author">{{ product.author }}</span>
     <h3 class="card__title">{{ product.name }}</h3>
     <span class="card__description">{{ product.description }}</span>
-    <data class="card__price" [value]="product.price">{{ product.price }} руб</data>
+    <data class="card__price" [value]="product.price">{{ product.price | insertSpaceAt: SPACE_INDEX }} &#8381;</data>
   </div>
+  <button class="card__button-buy">В корзину</button>
 </article>

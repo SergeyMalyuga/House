@@ -13,5 +13,6 @@ export enum CountryEn {
   DE = 'Germany',
   GB = 'England'
 }
+export const SPACE_INDEX = 2;
 
 export const ACTIVE_COUNTRY_CLASS = 'products__button-active';
