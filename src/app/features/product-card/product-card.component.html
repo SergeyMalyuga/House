@@ -1,15 +1,17 @@
 <article class="card">
   <picture class="card__wrapper-image">
-    <source [srcset]="product.images.mobile" media="(max-width: 480px)">
-    <source [srcset]="product.images.tabletMini" media="(max-width: 576px)">
-    <source [srcset]="product.images.tablet" media="(max-width: 768px)">
-    <img [src]="product.images.desktop" [alt]="product.name">
+    <source [srcset]="product.images.mobile" media="(max-width: 480px)" />
+    <source [srcset]="product.images.tabletMini" media="(max-width: 576px)" />
+    <source [srcset]="product.images.tablet" media="(max-width: 768px)" />
+    <img [src]="product.images.desktop" [alt]="product.name" />
   </picture>
   <div class="card__wrapper-info">
     <span class="card__author">{{ product.author }}</span>
     <h3 class="card__title">{{ product.name }}</h3>
     <span class="card__description">{{ product.description }}</span>
-    <data class="card__price" [value]="product.price">{{ product.price | insertSpaceAt: SPACE_INDEX }} &#8381;</data>
+    <data class="card__price" [value]="product.price"
+      >{{ product.price | insertSpaceAt: SPACE_INDEX }} &#8381;</data
+    >
   </div>
   <button class="card__button-buy">В корзину</button>
 </article>

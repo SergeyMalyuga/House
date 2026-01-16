@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { HeaderComponent } from '../../features/header/header.component';
-import {HeroComponent} from '../../features/hero/hero.component';
-import {ProductsComponent} from '../../features/products/products.component';
+import { HeroComponent } from '../../features/hero/hero.component';
+import { ProductsComponent } from '../../features/products/products.component';
 
 @Component({
   selector: 'app-main',

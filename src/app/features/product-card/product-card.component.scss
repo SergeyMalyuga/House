@@ -1,5 +1,5 @@
-@use '../../../styles/variables' as variables;
-@use '../../../styles/abstracts/mixins' as mixins;
+@use "../../../styles/variables" as variables;
+@use "../../../styles/abstracts/mixins" as mixins;
 
 .card {
   background-color: variables.$bg-main;
@@ -106,16 +106,28 @@
     &-buy {
       margin-top: auto;
 
-      @include mixins.button-style($width: 100%,  $fontSize: 20px, $lineHeight: 23px, $paddingTopBottom: 20px, $paddingLeftRight: 0);
+      @include mixins.button-style(
+        $width: 100%,
+        $fontSize: 20px,
+        $lineHeight: 23px,
+        $paddingTopBottom: 20px,
+        $paddingLeftRight: 0
+      );
 
       @media (width <= 576px) {
-        @include mixins.button-style($width: 100%,  $fontSize: 20px, $lineHeight: 21px, $paddingTopBottom: 13.5px, $paddingLeftRight: 0);
+        @include mixins.button-style(
+          $width: 100%,
+          $fontSize: 20px,
+          $lineHeight: 21px,
+          $paddingTopBottom: 13.5px,
+          $paddingLeftRight: 0
+        );
       }
     }
   }
 
   @media (width <= 480px) {
-/*    display: flex;
+    /*    display: flex;
     flex-direction: column;*/
     align-items: center;
   }

@@ -11,7 +11,7 @@ export enum AppRoute {
 export enum CountryEn {
   FR = 'France',
   DE = 'Germany',
-  GB = 'England'
+  GB = 'England',
 }
 export const SPACE_INDEX = 2;
 

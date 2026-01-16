@@ -1,23 +1,39 @@
 <section class="products">
   <div class="products__content container">
     <header class="products__header">
-      <h2 class="products__title-main">
-        Репродукции
-      </h2>
+      <h2 class="products__title-main">Репродукции</h2>
       <ul class="products__list-cities">
         <li class="products__item-cities">
-          <button appSelectCity [city]="City.FR" [currentCity]="currentCity()" (citySelected)="onCitySelected($event)"
-                  class="products__button-city">Франция
+          <button
+            appSelectCity
+            [city]="City.FR"
+            [currentCity]="currentCity()"
+            (citySelected)="onCitySelected($event)"
+            class="products__button-city"
+          >
+            Франция
           </button>
         </li>
         <li class="products__item-cities">
-          <button appSelectCity [city]="City.DE" [currentCity]="currentCity()" (citySelected)="onCitySelected($event)"
-                  class="products__button-city">Германия
+          <button
+            appSelectCity
+            [city]="City.DE"
+            [currentCity]="currentCity()"
+            (citySelected)="onCitySelected($event)"
+            class="products__button-city"
+          >
+            Германия
           </button>
         </li>
         <li class="products__item-cities">
-          <button appSelectCity [city]="City.GB" [currentCity]="currentCity()" (citySelected)="onCitySelected($event)"
-                  class="products__button-city">Англия
+          <button
+            appSelectCity
+            [city]="City.GB"
+            [currentCity]="currentCity()"
+            (citySelected)="onCitySelected($event)"
+            class="products__button-city"
+          >
+            Англия
           </button>
         </li>
       </ul>
@@ -25,12 +41,10 @@
     <ul class="products__list-images">
       @for (product of products(); track product.id) {
         <li class="products__item-images">
-          <app-product-card [product]="product"/>
+          <app-product-card [product]="product" />
         </li>
       } @empty {
-        <li class="products__empty">
-          Товары не найдены
-        </li>
+        <li class="products__empty">Товары не найдены</li>
       }
     </ul>
   </div>

@@ -1,5 +1,5 @@
-@use '../../../styles/variables' as variables;
-@use '../../../styles/abstracts/mixins' as mixins;
+@use "../../../styles/variables" as variables;
+@use "../../../styles/abstracts/mixins" as mixins;
 
 .hero {
   &__content {
@@ -108,15 +108,31 @@
       @include mixins.button-style;
 
       @media (width <= 768px) {
-        @include mixins.button-style($width: 210px, $paddingTopBottom: 17.5px, $paddingLeftRight: 50.1px);
+        @include mixins.button-style(
+          $width: 210px,
+          $paddingTopBottom: 17.5px,
+          $paddingLeftRight: 50.1px
+        );
       }
 
       @media (width <= 576px) {
-        @include mixins.button-style($width: 178px, $fontSize: 18px, $lineHeight: 21px, $paddingTopBottom: 13.5px, $paddingLeftRight: 40px);
+        @include mixins.button-style(
+          $width: 178px,
+          $fontSize: 18px,
+          $lineHeight: 21px,
+          $paddingTopBottom: 13.5px,
+          $paddingLeftRight: 40px
+        );
       }
 
       @media (width <= 480px) {
-        @include mixins.button-style($width: 154px, $fontSize: 18px, $lineHeight: 21px, $paddingTopBottom: 13.5px, $paddingLeftRight: 28px);
+        @include mixins.button-style(
+          $width: 154px,
+          $fontSize: 18px,
+          $lineHeight: 21px,
+          $paddingTopBottom: 13.5px,
+          $paddingLeftRight: 28px
+        );
       }
     }
   }

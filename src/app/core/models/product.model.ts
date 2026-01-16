@@ -1,4 +1,4 @@
-import {ImageResolutions} from './image-resolutions.model';
+import { ImageResolutions } from './image-resolutions.model';
 
 export interface Product {
   id: string;

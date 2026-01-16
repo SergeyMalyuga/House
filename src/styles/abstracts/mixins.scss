@@ -1,6 +1,12 @@
-@use '../variables' as variables;
+@use "../variables" as variables;
 
-@mixin button-style($width: 225px, $fontSize: 20px, $lineHeight: 23px, $paddingTopBottom: 20px, $paddingLeftRight: 59px) {
+@mixin button-style(
+  $width: 225px,
+  $fontSize: 20px,
+  $lineHeight: 23px,
+  $paddingTopBottom: 20px,
+  $paddingLeftRight: 59px
+) {
   display: inline-block;
   width: $width;
   text-decoration: none;
@@ -12,7 +18,9 @@
   padding: $paddingTopBottom $paddingLeftRight;
   border: 1px solid variables.$hover;
   cursor: pointer;
-  transition: background-color 0.5s ease, color 0.5s ease;
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
 
   &:hover {
     background-color: variables.$hover;
