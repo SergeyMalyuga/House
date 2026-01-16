@@ -2,11 +2,11 @@ export enum AppRoute {
   MAIN = '',
 }
 
-export enum CountryRu {
+/*export enum CountryRu {
   FR = 'Франция',
   DE = 'Германия',
   GB = 'Англия'
-}
+}*/
 
 export enum CountryEn {
   FR = 'France',

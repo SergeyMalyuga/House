@@ -1,5 +1,5 @@
 import {ProductsByCountry} from '../../../core/models/products-by-country.model';
-import {CountryEn, CountryRu} from '../../../core/constants/consts';
+import {CountryEn} from '../../../core/constants/consts';
 import {nanoid} from 'nanoid';
 
 export const mockProducts: ProductsByCountry = {

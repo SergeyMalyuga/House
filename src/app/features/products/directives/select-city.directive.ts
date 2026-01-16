@@ -1,13 +1,13 @@
 import {Directive, EventEmitter, HostBinding, HostListener, Input, Output} from '@angular/core';
-import {ACTIVE_COUNTRY_CLASS, CountryRu} from '../../../core/constants/consts';
+import {ACTIVE_COUNTRY_CLASS, CountryEn} from '../../../core/constants/consts';
 
 @Directive({
   selector: '[appSelectCity]',
 })
 export class SelectCityDirective {
-  @Output() citySelected = new EventEmitter<CountryRu>();
-  @Input({required: true}) currentCity!: CountryRu;
-  @Input({required: true}) city!: CountryRu;
+  @Output() citySelected = new EventEmitter<CountryEn>();
+  @Input({required: true}) currentCity!: CountryEn;
+  @Input({required: true}) city!: CountryEn;
 
   @HostBinding('class')
   get isSelected() {

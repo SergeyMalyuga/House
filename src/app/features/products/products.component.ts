@@ -1,8 +1,10 @@
-import {ChangeDetectionStrategy, Component, signal} from '@angular/core';
-import {CountryRu} from '../../core/constants/consts';
+import {ChangeDetectionStrategy, Component, computed, OnInit, signal} from '@angular/core';
+import {CountryEn} from '../../core/constants/consts';
 import {SelectCityDirective} from './directives/select-city.directive';
 import {mockProducts} from './mocks/mock-data';
 import {ProductCardComponent} from '../product-card/product-card.component';
+import {Product} from '../../core/models/product.model';
+import {toObservable} from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'app-products',
@@ -15,11 +17,15 @@ import {ProductCardComponent} from '../product-card/product-card.component';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProductsComponent {
-  public currentCity = signal<CountryRu>(CountryRu.FR);
-  public readonly City = CountryRu;
-  public products = mockProducts;
+  public currentCity = (signal<CountryEn>(CountryEn.FR));
+  public readonly City = CountryEn;
 
-  public onCitySelected(selectedCity: CountryRu): void {
+  public products = computed(() => {
+    const city = this.currentCity();
+    return mockProducts[city] || [];
+  });
+
+  public onCitySelected(selectedCity: CountryEn): void {
     this.currentCity.set(selectedCity);
   }
 }

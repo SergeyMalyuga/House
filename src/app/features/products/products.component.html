@@ -23,9 +23,13 @@
       </ul>
     </header>
     <ul class="products__list-images">
-      @for (product of products.France; track product.id) {
+      @for (product of products(); track product.id) {
         <li class="products__item-images">
           <app-product-card [product]="product"/>
+        </li>
+      } @empty {
+        <li class="products__empty">
+          Товары не найдены
         </li>
       }
     </ul>
