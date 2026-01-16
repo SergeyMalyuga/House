@@ -1,0 +1,78 @@
+@use '../../../styles/variables' as variables;
+
+.about {
+  padding-bottom: 70px;
+  padding-top: 70px;
+  color: variables.$text-main-color;
+  letter-spacing: 0;
+  text-align: left;
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(min-content, max-content));
+    gap: 30px;
+
+    @media (width <= 768px) {
+      grid-template-columns: repeat(1, minmax(min-content, max-content));
+    }
+  }
+
+  &__wrapper {
+    &-image {
+      justify-self: center;
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &__title {
+    &-main {
+      font-size: 40px;
+      line-height: 110%;
+      font-weight: 500;
+      letter-spacing: 0;
+      margin-bottom: 20px;
+
+      @media (width <= 768px) {
+        font-size: 30px;
+      }
+
+      @media (width <= 576px) {
+        font-size: 24px;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 150%;
+    text-align: left;
+    margin-bottom: 20px;
+
+    @media (width <= 576px) {
+      font-size: 16px;
+      line-height: 140%;
+    }
+  }
+
+  &__list {
+    &-avatars {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+
+      @media (width <= 480px) {
+        gap: 25px;
+      }
+    }
+  }
+}
