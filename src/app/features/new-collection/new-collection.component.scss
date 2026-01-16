@@ -118,6 +118,7 @@
       line-height: 23px;
       text-align: center;
       cursor: pointer;
+      transition: background-color 0.5s ease;
 
       &:hover {
         background-color: variables.$button-learn-hover;
