@@ -1,0 +1,162 @@
+@use '../../../styles/variables' as variables;
+
+.new-collection {
+  color: variables.$hovered-text-on-dark;
+  letter-spacing: 0;
+  text-align: left;
+  background-image: url("../../../assets/images/raster/new-collection-bg.jpg");
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 70px;
+
+  &__content {
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+    @media (width <= 576px) {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    @media (width <= 480px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    &-main {
+      width: 521px;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      font-size: 40px;
+      line-height: 100%;
+      margin-bottom: 25px;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 80px;
+        height: 80px;
+        background-image: url("../../../assets/images/vector/new-collection-star.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        flex-shrink: 0;
+      }
+
+      @media (width <= 768px) {
+        width: 450px;
+        font-size: 30px;
+
+        &::before {
+          width: 60px;
+          height: 60px;
+        }
+      }
+
+      @media (width <= 576px) {
+        width: 331px;
+        font-size:24px;
+
+        &::before {
+          width: 50px;
+          height: 50px;
+        }
+      }
+
+      @media (width <= 480px) {
+        width: 290px;
+      }
+    }
+  }
+
+  &__description {
+    width: 540px;
+    font-size: 18px;
+    line-height: 150%;
+
+    @media (width <= 768px) {
+      max-width: 690px;
+      width: 100%;
+    }
+
+    @media (width <= 576px) {
+      max-width: 510px;
+      width: 100%;
+      font-size: 16px;
+      line-height: 140%;
+      padding-bottom: 30px;
+    }
+
+    @media (width <= 480px) {
+      width: 275px;
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 20px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__button {
+    &-learn {
+      width: 257px;
+      background-color: variables.$button-learn-bg;
+      border: none;
+      padding-top: 21px;
+      padding-bottom: 21px;
+      color: variables.$text-main-color;
+      font-size: 20px;
+      line-height: 23px;
+      text-align: center;
+      cursor: pointer;
+
+      &:hover {
+        background-color: variables.$button-learn-hover;
+      }
+
+      &:active {
+        background-color: variables.$button-learn-active;
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      &:focus-visible {
+        outline: 2px solid variables.$button-learn-focus;
+      }
+
+      @media (width <= 768px) {
+        width: 210px;
+        padding-top: 18.5px;
+        padding-bottom: 18.5px;
+      }
+
+      @media (width <= 576px) {
+        width: 190px;
+        font-size: 18px;
+        line-height: 21px;
+        padding-top: 14.5px;
+        padding-bottom: 14.5px;
+      }
+
+      @media (width <= 480px) {
+        width: 100%;
+      }
+    }
+  }
+
+  @media (width <= 480px) {
+    background-image: url("../../../assets/images/raster/new-collection-bg-mobile.jpg");
+  }
+}

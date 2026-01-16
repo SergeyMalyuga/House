@@ -1,6 +1,8 @@
 @use "../../../styles/variables" as variables;
 
 .products {
+  padding-bottom: 70px;
+
   &__header {
     display: flex;
     justify-content: space-between;
