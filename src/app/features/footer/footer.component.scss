@@ -127,6 +127,23 @@
       line-height: 150%;
       letter-spacing: 0;
       text-align: left;
+      transition: background-color 0.5s ease, color 0.5s ease;
+
+      &:hover {
+        color: variables.$hover;
+      }
+
+      &:active {
+        color: variables.$active;
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      &:focus-visible {
+        background-color: variables.$focus;
+      }
 
       @media (width <= 576px) {
         font-size: 16px;
@@ -135,11 +152,28 @@
 
     &-social {
       color: variables.$text-main-color;
+      transition: background-color 0.5s ease, color 0.5s ease;
 
       svg {
         display: block;
       }
+
+      &:hover {
+        color: variables.$hover;
+      }
+
+      &:active {
+        color: variables.$active;
+      }
+
+      &:focus-visible {
+        svg {
+          background-color: red;
+        }
+
+      }
     }
+
   }
 
   &__nav {
@@ -154,6 +188,7 @@
 
     @media (width <= 480px) {
       gap: 20px;
+
       div:last-child {
         margin-left: auto;
         margin-right: auto;
