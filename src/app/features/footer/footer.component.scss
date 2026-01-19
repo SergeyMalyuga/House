@@ -10,6 +10,34 @@
 
   &__content {
     display: flex;
+
+    @media (width <= 940px) {
+      flex-direction: column;
+    }
+
+    @media (width <= 480px) {
+      flex-flow: row wrap;
+    }
+  }
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    @media (width <= 715px) {
+      flex-direction: column;
+    }
+
+    &-copyright {
+      display: flex;
+      flex-direction: column;
+
+      @media (width <= 715px) {
+        flex-direction: row;
+        align-items: center;
+      }
+    }
   }
 
   &__contact {
@@ -18,6 +46,20 @@
     span {
       font-size: 18px;
       line-height: 21px;
+
+      @media (width <= 576px) {
+        font-size: 16px;
+      }
+    }
+
+    @media (width <= 940px) {
+      margin: 0 0 30px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @media (width <= 480px) {
+      flex-direction: column;
     }
   }
 
@@ -59,6 +101,10 @@
       img {
         display: block;
       }
+
+      @media (width <= 940px) {
+        margin: 0;
+      }
     }
 
     &-phone {
@@ -70,6 +116,7 @@
       letter-spacing: 0;
       text-align: left;
       margin-bottom: 8px;
+      white-space: nowrap;
     }
 
     &-nav {
@@ -80,6 +127,10 @@
       line-height: 150%;
       letter-spacing: 0;
       text-align: left;
+
+      @media (width <= 576px) {
+        font-size: 16px;
+      }
     }
 
     &-social {
@@ -94,15 +145,45 @@
   &__nav {
     display: flex;
     gap: 60px;
+    flex-wrap: wrap;
+
+    @media (width <= 715px) {
+      margin-bottom: 15.5px;
+      justify-content: space-between;
+    }
+
+    @media (width <= 480px) {
+      gap: 20px;
+      div:last-child {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
   }
 
   &__social {
-    margin-left: auto;
     display: flex;
     flex-direction: column;
+    font-size: 12px;
+    line-height: 120%;
+    letter-spacing: 0;
 
     small {
       margin-bottom: 6px;
+      font-size: 12px;
+      line-height: 120%;
+      letter-spacing: 0;
+    }
+
+    @media (width <= 940px) {
+      padding-right: 38px;
+    }
+
+    @media (width <= 715px) {
+      align-items: center;
+      margin: 0;;
+      border-top: 1px solid variables.$grey;
+      padding: 16.5px 0 0;
     }
   }
 }
