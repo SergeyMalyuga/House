@@ -4,6 +4,10 @@
 @import "../node_modules/swiper/modules/pagination.css";
 @import "../node_modules/swiper/modules/navigation.css";
 
+html {
+  scroll-behavior: smooth;
+}
+
 *,
 *::before,
 *::after {
