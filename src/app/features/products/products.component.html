@@ -57,7 +57,10 @@
     >
       @for (product of products(); track product.id) {
         <li class="products__item-images">
-          <app-product-card [product]="product" />
+          <app-product-card
+            [product]="product"
+            (productAdded)="onProductAdded()"
+          />
         </li>
       } @empty {
         <li class="products__empty">Товары не найдены</li>

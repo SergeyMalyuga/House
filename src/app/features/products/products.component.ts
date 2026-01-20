@@ -2,6 +2,8 @@ import {
   ChangeDetectionStrategy,
   Component,
   computed,
+  EventEmitter,
+  Output,
   signal,
 } from '@angular/core';
 import { CountryEn, DisplayType } from '../../core/constants/consts';
@@ -34,6 +36,7 @@ import { SwiperComponent } from '../swiper/swiper.component';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProductsComponent {
+  @Output() productAdded = new EventEmitter<void>();
   public currentCity = signal<CountryEn>(CountryEn.FR);
   public displayControl = new FormControl<DisplayType>(DisplayType.LIST);
   public displayType$ = this.displayControl.valueChanges.pipe(
@@ -49,5 +52,9 @@ export class ProductsComponent {
 
   public onCitySelected(selectedCity: CountryEn): void {
     this.currentCity.set(selectedCity);
+  }
+
+  public onProductAdded() {
+    this.productAdded.emit();
   }
 }

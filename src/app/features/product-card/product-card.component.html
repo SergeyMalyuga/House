@@ -13,5 +13,11 @@
       >{{ product.price | insertSpaceAt: SPACE_INDEX }} &#8381;</data
     >
   </div>
-  <button class="card__button-buy">В корзину</button>
+  <button
+    appProductAddToCart
+    (productAdded)="onProductAdded()"
+    class="card__button-buy"
+  >
+    В корзину
+  </button>
 </article>

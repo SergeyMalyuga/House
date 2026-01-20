@@ -134,6 +134,10 @@ body {
   }
 }
 
+.mat-badge-content {
+  background-color: variables.$hover !important;
+}
+
 .hide {
   display: none !important;
 }
