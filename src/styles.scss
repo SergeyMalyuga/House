@@ -1,5 +1,8 @@
 @use "./styles/fonts";
 @use "./styles/variables" as variables;
+@import "../node_modules/swiper/swiper.css";
+@import "../node_modules/swiper/modules/pagination.css";
+@import "../node_modules/swiper/modules/navigation.css";
 
 *,
 *::before,
@@ -74,13 +77,17 @@ body {
 .products .products__content {
   mat-button-toggle {
     background-color: variables.$focus;
-    transition: background-color 0.5s ease, color 0.5s ease;
+    transition:
+      background-color 0.5s ease,
+      color 0.5s ease;
 
     &:hover {
       background-color: variables.$hover;
       color: variables.$hovered-text-on-dark;
 
-      .mat-button-toggle-button .mat-button-toggle-checkbox-wrapper .mat-pseudo-checkbox-checked::after {
+      .mat-button-toggle-button
+        .mat-button-toggle-checkbox-wrapper
+        .mat-pseudo-checkbox-checked::after {
         border-left: 2px solid variables.$hovered-text-on-dark;
       }
 
@@ -106,7 +113,9 @@ body {
     background-color: variables.$active;
     color: variables.$hovered-text-on-dark;
 
-    .mat-button-toggle-button .mat-button-toggle-checkbox-wrapper .mat-pseudo-checkbox-checked::after {
+    .mat-button-toggle-button
+      .mat-button-toggle-checkbox-wrapper
+      .mat-pseudo-checkbox-checked::after {
       border-left: 2px solid variables.$hovered-text-on-dark;
     }
 
@@ -116,6 +125,14 @@ body {
   }
 }
 
+.swiper-slide {
+  height: auto;
+  display: flex;
+
+  @media (width <= 480px) {
+    justify-content: center;
+  }
+}
 
 .hide {
   display: none !important;
@@ -131,7 +148,3 @@ body {
   clip-path: inset(50%);
   border: 0;
 }
-
-
-
-

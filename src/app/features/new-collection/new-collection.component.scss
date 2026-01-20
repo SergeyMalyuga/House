@@ -1,4 +1,4 @@
-@use '../../../styles/variables' as variables;
+@use "../../../styles/variables" as variables;
 
 .new-collection {
   color: variables.$hovered-text-on-dark;
@@ -61,7 +61,7 @@
 
       @media (width <= 576px) {
         width: 331px;
-        font-size:24px;
+        font-size: 24px;
 
         &::before {
           width: 50px;

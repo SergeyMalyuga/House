@@ -1,0 +1,12 @@
+<div class="swiper">
+  <div class="swiper-wrapper">
+    @for (product of products; track product.id) {
+      <div class="swiper-slide">
+        <app-product-card [product]="product" />
+      </div>
+    }
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div>

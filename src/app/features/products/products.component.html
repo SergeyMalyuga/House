@@ -2,47 +2,59 @@
   <div class="products__content container">
     <header class="products__header">
       <h2 class="products__title-main">Репродукции</h2>
-      <mat-button-toggle-group [formControl]="displayControl" aria-label="display-type">
+      <mat-button-toggle-group
+        [formControl]="displayControl"
+        aria-label="display-type"
+      >
         <mat-button-toggle [value]="DisplayType.LIST">list</mat-button-toggle>
-        <mat-button-toggle [value]="DisplayType.SLIDER">slider</mat-button-toggle>
+        <mat-button-toggle [value]="DisplayType.SLIDER"
+          >slider</mat-button-toggle
+        >
       </mat-button-toggle-group>
-        <ul class="products__list-cities">
-          <li class="products__item-cities">
-            <button
-              appSelectCity
-              [city]="City.FR"
-              [currentCity]="currentCity()"
-              (citySelected)="onCitySelected($event)"
-              class="products__button-city"
-            >
-              Франция
-            </button>
-          </li>
-          <li class="products__item-cities">
-            <button
-              appSelectCity
-              [city]="City.DE"
-              [currentCity]="currentCity()"
-              (citySelected)="onCitySelected($event)"
-              class="products__button-city"
-            >
-              Германия
-            </button>
-          </li>
-          <li class="products__item-cities">
-            <button
-              appSelectCity
-              [city]="City.GB"
-              [currentCity]="currentCity()"
-              (citySelected)="onCitySelected($event)"
-              class="products__button-city"
-            >
-              Англия
-            </button>
-          </li>
-        </ul>
+      <ul class="products__list-cities">
+        <li class="products__item-cities">
+          <button
+            appSelectCity
+            [city]="City.FR"
+            [currentCity]="currentCity()"
+            (citySelected)="onCitySelected($event)"
+            class="products__button-city"
+          >
+            Франция
+          </button>
+        </li>
+        <li class="products__item-cities">
+          <button
+            appSelectCity
+            [city]="City.DE"
+            [currentCity]="currentCity()"
+            (citySelected)="onCitySelected($event)"
+            class="products__button-city"
+          >
+            Германия
+          </button>
+        </li>
+        <li class="products__item-cities">
+          <button
+            appSelectCity
+            [city]="City.GB"
+            [currentCity]="currentCity()"
+            (citySelected)="onCitySelected($event)"
+            class="products__button-city"
+          >
+            Англия
+          </button>
+        </li>
+      </ul>
     </header>
-    <ul class="products__list-images" [class.hide]="(displayType$ | async) !== DisplayType.LIST">
+    <app-swiper
+      [products]="products()"
+      [class.hide]="(displayType$ | async) !== DisplayType.SLIDER"
+    />
+    <ul
+      class="products__list-images"
+      [class.hide]="(displayType$ | async) !== DisplayType.LIST"
+    >
       @for (product of products(); track product.id) {
         <li class="products__item-images">
           <app-product-card [product]="product" />
