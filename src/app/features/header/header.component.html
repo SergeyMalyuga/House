@@ -52,7 +52,7 @@
           [class.header-main__line--open]="isMenuOpen()"
         ></span>
       </button>
-      <button class="header-main__button-basket" type="button">
+      <button matBadge="4" [matBadgeHidden]="cartQuantity === 0" class="header-main__button-basket" type="button">
         <svg width="24" height="24">
           <use href="./assets/images/vector/header-basket.svg#header-basket" />
         </svg>
