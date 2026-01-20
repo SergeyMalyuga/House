@@ -71,6 +71,52 @@ body {
   }
 }
 
+.products .products__content {
+  mat-button-toggle {
+    background-color: variables.$focus;
+    transition: background-color 0.5s ease, color 0.5s ease;
+
+    &:hover {
+      background-color: variables.$hover;
+      color: variables.$hovered-text-on-dark;
+
+      .mat-button-toggle-button .mat-button-toggle-checkbox-wrapper .mat-pseudo-checkbox-checked::after {
+        border-left: 2px solid variables.$hovered-text-on-dark;
+      }
+
+      .mat-pseudo-checkbox::after {
+        border-bottom: 2px solid variables.$hovered-text-on-dark;
+      }
+    }
+
+    &:active {
+      background-color: variables.$active;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 2px variables.$hover solid;
+    }
+  }
+
+  .mat-button-toggle.mat-button-toggle-checked {
+    background-color: variables.$active;
+    color: variables.$hovered-text-on-dark;
+
+    .mat-button-toggle-button .mat-button-toggle-checkbox-wrapper .mat-pseudo-checkbox-checked::after {
+      border-left: 2px solid variables.$hovered-text-on-dark;
+    }
+
+    .mat-pseudo-checkbox::after {
+      border-bottom: 2px solid variables.$hovered-text-on-dark;
+    }
+  }
+}
+
+
 .hide {
   display: none !important;
 }
@@ -85,4 +131,7 @@ body {
   clip-path: inset(50%);
   border: 0;
 }
+
+
+
 

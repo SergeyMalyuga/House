@@ -17,9 +17,10 @@ import {AsyncPipe} from '@angular/common';
 })
 export class ProductsComponent {
   public currentCity = signal<CountryEn>(CountryEn.FR);
-  public readonly City = CountryEn;
   public displayControl = new FormControl<DisplayType>(DisplayType.LIST);
   public displayType$ = this.displayControl.valueChanges.pipe(startWith(this.displayControl.value));
+  public readonly DisplayType = DisplayType;
+  public readonly City = CountryEn;
 
   public products = computed(() => {
     const city = this.currentCity();
@@ -29,10 +30,4 @@ export class ProductsComponent {
   public onCitySelected(selectedCity: CountryEn): void {
     this.currentCity.set(selectedCity);
   }
-
-  public onToggleSelected(): void {
-    console.log(this.displayControl.value);
-  }
-
-  public readonly DisplayType = DisplayType;
 }

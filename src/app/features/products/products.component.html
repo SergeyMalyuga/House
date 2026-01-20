@@ -2,7 +2,7 @@
   <div class="products__content container">
     <header class="products__header">
       <h2 class="products__title-main">Репродукции</h2>
-      <mat-button-toggle-group [formControl]="displayControl" (change)="onToggleSelected()" aria-label="display-type">
+      <mat-button-toggle-group [formControl]="displayControl" aria-label="display-type">
         <mat-button-toggle [value]="DisplayType.LIST">list</mat-button-toggle>
         <mat-button-toggle [value]="DisplayType.SLIDER">slider</mat-button-toggle>
       </mat-button-toggle-group>

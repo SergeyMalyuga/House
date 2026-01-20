@@ -72,8 +72,8 @@
       text-align: center;
       background-color: variables.$focus;
       border-radius: 20px;
-      border: none;
-      padding: 10px 20px;
+      border: 2px solid transparent;
+      padding: 8px 18px;
       cursor: pointer;
       transition:
         color 0.5s ease,
@@ -93,7 +93,7 @@
       }
 
       &:focus-visible {
-        outline: 2px variables.$hover solid;
+        border: 2px solid variables.$hover;
       }
 
       @media (width <= 576px) {
@@ -119,4 +119,5 @@
       margin-top: 50px;
     }
   }
+
 }
